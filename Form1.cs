@@ -14,13 +14,15 @@ namespace ADB_Sync
     public partial class Form1 : Form
     {
         public Form1() {  InitializeComponent(); }
-        
+        OpenFileDialog ofd = new OpenFileDialog();
+        FolderBrowserDialog fbd = new FolderBrowserDialog();
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true )
             {
-                OpenFileDialog ofd = new OpenFileDialog();
+                
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     //Get the path of specified file
@@ -29,12 +31,18 @@ namespace ADB_Sync
                 }
             } else if (radioButton2.Checked == true )
             {
-                FolderBrowserDialog fbd = new FolderBrowserDialog();
+                
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
                     string folderPath = fbd.SelectedPath;
+                    textBox1.Text = folderPath;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
