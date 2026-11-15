@@ -18,7 +18,7 @@ namespace ADB_Sync
         FolderBrowserDialog fbd = new FolderBrowserDialog();
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BrowseButton_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true )
             {
@@ -40,7 +40,7 @@ namespace ADB_Sync
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
 
         }
